@@ -48,8 +48,11 @@ def custom_append(input_list, value):
         True
 
     """
-
-    pass
+    input_list += [value]
+    # list(value) doesn't work - do more research  on this
+    
+    # length = custom_len(input_list)
+    # input_list[length:length] = [value]
 
 
 def custom_extend(input_list, second_list):
