@@ -1,6 +1,10 @@
 """Utilities for manipulating lists."""
 
 
+from ast import Return
+from http.client import REQUEST_URI_TOO_LONG
+
+
 def head(input_list):
     """Return the first item of the input list.
 
@@ -117,7 +121,7 @@ def inner_four_end(input_list):
 
     """
 
-    return []
+    return input_list[-6:-2]
 
 
 def replace_head(input_list):
@@ -133,8 +137,7 @@ def replace_head(input_list):
     [42, 3, 6, 9, 12, 15, 18, 21, 24, 27]
 
     """
-
-    pass
+    input_list[0] = 42
 
 
 def replace_third_and_last(input_list):
