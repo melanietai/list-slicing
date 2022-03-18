@@ -202,8 +202,10 @@ def custom_reverse(input_list):
         True
 
     """
-
-    pass
+    items_except_last_reverse = input_list[:custom_len(input_list)-1][::-1]
+    del input_list[:custom_len(input_list)-1]
+    input_list += items_except_last_reverse
+    
 
 
 def custom_contains(input_list, value):
