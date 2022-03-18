@@ -89,7 +89,14 @@ def custom_insert(input_list, index, value):
 
     """
 
-    pass
+    input_list_to_the_right = input_list[index:]
+    del input_list[index:]
+    input_list += [value]
+    input_list += input_list_to_the_right
+    # len = custom_len(input_list)
+    # input_list[:index]
+    
+    
 
 
 def custom_remove(input_list, value):
