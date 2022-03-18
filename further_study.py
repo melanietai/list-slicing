@@ -142,8 +142,10 @@ def custom_pop(input_list):
         ['Jan', 'Feb']
 
     """
+    removed_item = input_list[-1]
+    del input_list[-1]
 
-    return None
+    return removed_item
 
 
 def custom_index(input_list, value):
