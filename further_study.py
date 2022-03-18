@@ -89,12 +89,12 @@ def custom_insert(input_list, index, value):
 
     """
 
-    input_list_to_the_right = input_list[index:]
+    input_list_right_side = input_list[index:]
     del input_list[index:]
+    # input_list = input_list[:index] --> doesn't work because it made a new list
     input_list += [value]
-    input_list += input_list_to_the_right
-    # len = custom_len(input_list)
-    # input_list[:index]
+    input_list += input_list_right_side
+    
     
     
 
@@ -115,7 +115,16 @@ def custom_remove(input_list, value):
 
     """
 
-    pass
+    for i, item in enumerate(input_list):
+        if item == value:
+            item_removed_index = i
+            break
+    
+    input_list_right_side = input_list[i:]
+    del input_list[i:]
+    input_list += input_list_right_side[1:]
+
+
 
 
 def custom_pop(input_list):
