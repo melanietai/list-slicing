@@ -248,4 +248,8 @@ def custom_equality(some_list, another_list):
 
     """
 
-    return None
+    for i, item in enumerate(some_list):
+        if item != another_list[i]:
+            return False
+
+    return True
